@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Nedelkovich Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Nedelkovich<br />
+						Portfolio</h1>
+						<p>Welcome to my portfolio website! My name is Milan and I am very glad to have you here!</br > 
+						Below you can find portfolio projects which I created in SQL, Excel, Power BI and Python.
+					    <br> Let's go!</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Nedelkovich portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">My Projects</a></li>
+							<li><a href="about.html">About me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="http://linkedin.com/in/milannedeljkovic032" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/milanmur/portfolio" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="indexru.html">RU</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+
+							<article class="post featured">
+								<header class="major">
+									<h2><a href="https://github.com/milanmur/portfolio/tree/main/Power%20BI%20Reports" target="_blank">Bank churn analysis project in Excel</a></h2>
+								</header>
+								<a href="https://github.com/milanmur/portfolio/tree/main/Power%20BI%20Reports" target="_blank" class="image main"><img src="images/titlechurn.jpg" alt="" /></a>
+								<ul class="actions special"> </ul>
+								<p>	Churn analysis is the evaluation of a company's customer loss rate in order to reduce it. As we know, it is much more expensive to sign in a new client than keeping an existing one.
+									Therefore, in this project, I will analyze behaviour of clients who churned and I will get some insights in order to help the bank improve client retention strategies, decrease churn rate and keep existing clients.
+									This <a href="https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn" target="_blank">dataset</a> is downloaded from Kaggle, and whole project will be done in MS Excel.
+									Dataset has 10 000 values and 18 columns. Data is inspected, and there is no need for any cleaning before actual calculations.</p>
+
+									<h3>Columns explained</h3>
+									<p>RowNumber: corresponds to the record (row) number and has no effect on the output.<br>
+										CustomerId: contains random values and has no effect on customer leaving the bank.<br>
+										Surname: the surname of a customer has no impact on their decision to leave the bank.<br>
+										CreditScore: can have an effect on customer churn, since a customer with a higher credit score is less likely to leave the bank.<br>
+										Geography: a customer&rsquo;s location can affect their decision to leave the bank.<br>
+										Gender: it&rsquo;s interesting to explore whether gender plays a role in a customer leaving the bank.<br>
+										Age: this is certainly relevant, since older customers are less likely to leave their bank than younger ones.<br>
+										Tenure: refers to the number of years that the customer has been a client of the bank. Normally, older clients are more loyal and less likely to leave a bank.<br>
+										Balance: also a very good indicator of customer churn, as people with a higher balance in their accounts are less likely to leave the bank compared to those with lower balances.<br>
+										NumOfProducts: refers to the number of products that a customer has purchased through the bank.<br>
+										HasCrCard: denotes whether or not a customer has a credit card. This column is also relevant, since people with a credit card are less likely to leave the bank.<br>
+										IsActiveMember: active customers are less likely to leave the bank.<br>
+										EstimatedSalary: as with balance, people with lower salaries are more likely to leave the bank compared to those with higher salaries.<br>
+										Exited: whether or not the customer left the bank.<br>
+										Complain: customer has complaint or not.<br>
+										Satisfaction Score: Score provided by the customer for their complaint resolution.<br>
+										Card Type: type of card hold by the customer.<br>
+										Points Earned: the points earned by the customer for using credit card.</p>
+
+								<h3>Calculating bank churn rate</h3>
+								<p>In Excel, I created table "BankChurn" in order to better organize and analyze my data. I calculated first total churn rate in the bank, using basic Excel formulas SUM and COUNT: 
+									<br><br><img src="images/excel1.png" width="450" /> <br>
+									<strong>Churn rate equals 20,4%</strong>, 
+								which is basically considered as an average churn rate for a bank, according to <a href="https://www.akkio.com/post/bank-churn-prediction" target="_blank">article</a> from Akkio.
+								</p>
+								<h3>Performing statistical calculations</h3>
+								<p>Next step is to perform basic statistical calculations on numeric columns inside our dataset, in order to get better acquainted with the data. 
+									I calculated average, median, standard deviation, minimum and maximum value, and counted blank cells.</p>
+									<img src="images/Screenshot_1.png" width="850" />
+								<p>It is clear that dataset does not have blank values. Columns "Balance" and "Estimated Salary" have the highest variation between minimum and maximum values.
+									Largest difference between mean and median has column "Balance". Median is higher than mean, therefore distribution is left-skewed (negative).
+								</p>
+
+
+								<h3>Histograms of continous variables</h3>
+								<img src="images/histograms.jpg" width="750" /> <br>
+								<p>By looking at these histograms, we can see that most of the variables are well balanced, 
+									like the estimated salary it is clear that there is practically the same number of people for each salary range, 
+									as well as for Points Earned variable. These distributions are classified as uniform. 
+									On the other hand, histograms of Age and Credit Score shows normal distribution. Most clients are between 25 and 48 years old,
+								and credit score of most clients is between 510 and 782 points. Balance variable shows that majority of clients do not have any balance in the bank,
+								while those who have, mostly have between 80 000 and 160 000 euros (normally distributed). </p>
+
+								<h3>Creating pivot tables and graphs</h3>
+								<p>I created few pivot tables in order to draw graphs from them, to compare categorical variables with my target variable.
+									I made calculations with regards to gender, country, age, ownership of credit card, satisfaction score, card type.</p>
+								<img src="images/pivot1.png" width="750" />
+								<p>Churn rate by gender is following: <br>
+									<strong>Female: 25,1%</strong><br>
+									<strong>Male: 16,5%</strong> <br>
+									This means that the churn rate for female clients is higher, compared to male clients.
+									<br>
+								<br><img src="images/pivot2.png" width="750" /><br>
+								Churn rate by country is following:<br>
+								<strong>France: 16,2%</strong><br>
+								<strong>Germany: 32,4%</strong> <br>
+								<strong>Spain: 16,7%</strong> <br>
+								This shows that highest churn rate is in Germany, followed by Spain and France.
+								<br>
+								<br>
+								<img src="images/pivot3.png" width="750" /><br>
+								I have classified age of clients into 5 groups inside Pivot table. Churn rate by age group:<br>
+								<strong>Under 30: 7,6%</strong><br>
+								<strong>30-39: 10,9%</strong> <br>
+								<strong>40-49: 30,8%</strong> <br>
+								<strong>50-60: 55,7%</strong> <br>
+								<strong>Above 60: 24,8%</strong> <br>
+								This indicates that the highest churn rate is observed in the age group 50-60, followed by 40-50 age group. 
+								Lowest churn rate is spotted under 30 age group.<br>
+								In order to get better picture, I performed three additional analysis, with regards to number of products, credit card ownership and active membership.
+								<br>
+								<br><img src="images/pivots1.jpg" width="750" /><br>
+								<p>The number of products held by clients can impact churn. Clients with fewer products are less likely to churn,
+									while those with more products tend to churn more. Further analysis would be required to understand specific relationship.
+									Having a credit card does not seem to have significant impact. Clients with active membership ten to have lower churn rate compared to
+									inactive members. This tells us that active clients are more likely to stay with the bank.
+									<br>Lastly, I created Box&Whisker chart for showing balance distribution among clients who churned versus retained clients.
+									<br>
+									<img src="images/boxplot.png" class="center" width="800" />
+									<br>
+									The distribution of client's balances does not show a clear difference between churned and retained clients. 
+									Further analysis and feature engineering may be required to explore the relationship between balance and churn in more detail.
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Belgrade, Serbia</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="tel:+79113446441">+7(911) 344-6441</a> (currently active)<br /> <a href="tel:+381644606100">+381(64) 46-06-100 </a></p><br />
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:milan.nedeljkovic@rgf.rs">milan.nedeljkovic@rgf.rs</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="http://linkedin.com/in/milannedeljkovic032" target="_blank" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://github.com/milanmur/portfolio" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Nedelkovich</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
